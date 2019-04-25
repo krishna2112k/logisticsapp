@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>OrderPage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 *ngIf="orderPicked">Please reach your destination below</h3>
+    <div #map id="map"></div>  
+    <button *ngIf="orderPicked" ion-button  block  (click)="orderDelivered()" >Order delivered</button>
+    <button *ngIf="!orderPicked" ion-button color="secondary" block (click)="picked()">Order picked</button>
+</ion-content>

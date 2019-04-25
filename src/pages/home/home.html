@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+
+    <span *ngIf="received">
+         <ion-card-header>
+            <ion-card-title>Some random retaurant</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+              <p>Need to deliver in 30 mins</p>
+            <button ion-button color="secondary" block (click)="accept()">accept</button>
+          </ion-card-content>
+    </span>
+
+    <span *ngIf="!received">
+          <ion-card-header>
+            <ion-card-title>Searching for orders</ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+            Your orders will come up here
+            <p>Today so far delivered 3 orders</p>
+          </ion-card-content>
+    </span>
+  </ion-card>
+
+</ion-content>
